@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kitchen_id: 1
+  name: MyString
+  student_id: 1
+  exp_date: 2017-10-02
+  start_date: 2017-10-02
+
+two:
+  kitchen_id: 1
+  name: MyString
+  student_id: 1
+  exp_date: 2017-10-02
+  start_date: 2017-10-02
