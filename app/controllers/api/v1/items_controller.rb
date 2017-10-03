@@ -12,8 +12,7 @@ class Api::V1::ItemsController < ApplicationController
 
   def create
     @student = Student.find_or_create_by(slack_name: params[:slack_name])
-    @item =Item.new(name: params[:name], student_id: @student.id, start_date: params[:start_date], exp_date: params[:exp_date], storage_id: params[:storage_id], kitchen_id: 1)\
-
+    @item =Item.new(name: params[:name], student_id: @student.id, start_date: params[:start_date], exp_date: params[:exp_date], storage_id: params[:storage_id], kitchen_id: 1)
     if @item.save
       render json: @item
     else
