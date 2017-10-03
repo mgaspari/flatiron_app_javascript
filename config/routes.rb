@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
       get 'kegs/:id', to: 'kegs#show'
 
+      post 'kegs/:id', to: 'kegs#update'
+
     end
 
   end
