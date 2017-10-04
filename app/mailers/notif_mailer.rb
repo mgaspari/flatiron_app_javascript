@@ -1,9 +1,9 @@
 class NotifMailer < ApplicationMailer
   default from: "flatironapp@gmail.com"
 
-  def sample_email(user)
+  def sample_email(user, item)
     @user = user
-    @item = Student.find_by(slack_name: user).items.last.name
-    mail(to: user, subject: 'Sample Email')
+    @item = item
+    mail(to: user, subject: "Your #{item.name} needs to be removed")
   end
 end
