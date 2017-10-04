@@ -1,7 +1,8 @@
 class Api::V1::ItemsController < ApplicationController
 
   def show
-    @student = Student.find_by(slack_name: params[:slack_name])
+    name = "#{params[:slack_name]}.com"
+    @student = Student.find_by(slack_name: name)
     render json: @student.items
   end
 
@@ -23,7 +24,12 @@ class Api::V1::ItemsController < ApplicationController
 
   end
 
-
+  def delete
+    @item = Item.find_by(id: params[:id])
+    @item.delete
+    message = {message: 'Deleted'}
+    render json: message
+  end
 
 
 end

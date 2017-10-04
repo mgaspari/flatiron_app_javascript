@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
       post 'kegs/:id', to: 'kegs#update'
 
+      get 'items/delete/:id', to: 'items#delete'
+
     end
 
   end
